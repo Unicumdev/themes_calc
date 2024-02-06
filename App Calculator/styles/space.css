@@ -1,0 +1,269 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../media/space.jpg');
+    background-size: cover;
+	background-attachment: fixed;
+}
+
+.container{
+	position: absolute;
+	inset: 0px;
+}
+
+#myVideo {
+	display:none;
+	}
+	
+	.panel{
+		display: grid;
+		place-items: center;
+		position: absolute;
+		width: 30%;
+		height: 90vmin;
+		top: 10px;
+		right: 10px;
+		bottom: 10px;
+	}
+	
+	.panel button{ 
+		padding: auto 1vmax;
+		width:100%;
+		height: 100%;
+		font-size: 8vmin;
+		font-weight: 900;
+		color:white;
+		border: 1px solid white;
+		background: rgba(255, 255, 255, 0.1);
+		background-size: cover;
+	}
+
+.panel button:nth-child(1n):hover{ 
+	background-image: url(../media/pop-it.jpg);
+
+}
+
+.panel button:nth-child(2n):hover{ 
+	background-image: url(../media/sea-poster.jpg);
+}
+
+.panel button:nth-child(3n):hover{ 
+	background: #03e9f4;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+				border: none;	
+				text-shadow: 0 0 5px white,
+				0 0 25px white,
+				0 0 50px white,
+				0 0 200px white;
+}
+
+.panel button:nth-child(4n):hover{ 
+	background-image: url(../media/fire-poster.jpg);
+}
+
+.panel button:nth-child(5n):hover{ 
+	background-image: url(../media/space.jpg);
+}
+
+
+.calculator {
+	display: flex;
+	flex-direction: column;
+    flex-wrap: wrap;
+	position: relative;
+	width: 55vmin;
+	height: 70vmin;
+	border-radius: 15px;
+	box-shadow: 10px 10px 10px  rgba(0,0,0,0.3),
+	            -10px -10px 10px  rgba(255,255,255,0.3);
+	margin: 12vmin;
+}
+
+.numbers{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 20%;
+	background: transparent;
+}
+input {
+	display: block;
+	font-size: 10vmin;
+    width: 10vmin;
+	font-weight: 900;
+	text-align: center;
+	color:  transparent;
+	background: transparent;
+    border: none;
+	z-index: 20;
+}
+
+ .value {
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+    height: 10vmin;
+	font-size: 5vmin;
+	font-weight: 900;
+	background: transparent;
+	margin: 3vmin 5vmin;
+	box-shadow:
+	inset 10px 10px 10px  rgba(0,0,0,0.3),
+	inset -10px -10px 10px  rgba(255,255,255,0.3);
+	color:white;
+}
+
+
+.btn {
+	display: grid;
+	place-items: center;
+	position: relative;
+	background: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+	width: 25%;
+	height: 100%;
+	z-index: 15;
+}
+
+.wrapper {
+	cursor: pointer;
+	position: absolute;
+	background: transparent;
+	transform-style: preserve-3d;
+	animation: rotate 10s infinite linear;
+  }
+  .wrapper:hover{
+	animation: paused;
+  }
+   
+  .face, .wrapper {
+	width: 10vmin;
+	height: 10vmin;
+  }
+  
+  .wrapper:before, .container:after {
+	content: "";
+	display: block;
+	position: absolute;
+	border: none;
+  }
+
+  .wrapper:before {
+	transform: rotateX(90deg);
+  }
+
+  .wrapper:after {
+	transform: rotatey(90deg);
+  }
+  
+  .face {
+	background-color: teal;
+	box-shadow: inset 0px 0px 10px 0px #333;
+	position: absolute;
+	transform-origin: center;
+	font-size: 10vmin;
+	text-align: center;
+	color:white;
+	border: none;
+	opacity: 0.9;
+	background: teal;
+  }
+  
+  .back {
+	transform: translateZ(-5vmin);
+  }
+  .left {
+	transform: translateX(-5vmin) rotateY(90deg);
+  }
+  .right {
+	transform: translateX(5vmin) rotateY(90deg);
+  }
+  .top {
+	transform: translateY(-5vmin) rotateX(90deg);
+  }
+  .bottom {
+	transform: translateY(5vmin) rotateX(90deg);
+  }
+  .front {
+	transform: translateZ(5vmin);
+  }
+  
+  @keyframes rotate {
+	100% {
+	  transform: rotatex(360deg) rotateY(360deg) rotateZ(360deg);
+	}
+  }
+
+  @media  (max-width:479px) and (orientation: portrait){
+	.panel{
+		display: flex;
+		position: absolute;
+		top: 0px;
+		right: 2vmin;
+		left: 2vmin;
+		background: transparent;
+		width: 90vmin;
+		height: 20vmin;
+	}
+	
+	.panel button{ 
+		font-size: 3vmin;
+		font-weight: 900;
+		color:white;
+		border: 1px solid white;
+		background: rgba(255, 255, 255, 0.1);
+		background-size: cover;
+
+	
+	}
+	.panel button:nth-child(1n){ 
+		background-image: url(../media/pop-it.jpg);
+		background-size: cover;
+	}
+	
+	.panel button:nth-child(2n){ 
+		background-image: url(../media/sea-poster.jpg);
+	}
+	
+	.panel button:nth-child(3n){ 
+		background: #03e9f4;
+		box-shadow: 0 0 5px #03e9f4,
+					0 0 25px #03e9f4,
+					0 0 50px #03e9f4,
+					0 0 200px #03e9f4;
+					border: none;	
+	}
+	
+	.panel button:nth-child(4n){ 
+		background-image: url(../media/fire-poster.jpg);
+	}
+	
+	.panel button:nth-child(5n){ 
+		background-image: url(../media/space.jpg);
+	}
+	
+	.calculator {
+		position: absolute;
+		top: 30vmin;
+		width: 55vmin;
+		height: 70vmin;
+		margin:  20vh auto;
+}
+.container{
+display: grid;
+place-items: center;
+}
+}
+
+
+  

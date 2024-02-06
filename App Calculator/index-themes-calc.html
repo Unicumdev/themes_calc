@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+        <link  href="styles/pop-it.css" rel="stylesheet">
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo"><!--Видео для стиля SEA-->
+      <source  src="" type="video/mp4">
+    </video>
+    <div class="container">
+    <form class="calculator" name="calc">
+      <div class="numbers">
+        <input type="text" name="input" size="16" class="value">
+      </div>
+      <div class="numbers">
+      <div class="btn"><span></span><span></span><span></span><span></span>  
+            <div class="wrapper">
+        <div class="face front">1</div>
+        <div class="face back">1</div>
+        <div class="face left">1</div>
+        <div class="face right">1</div>
+        <div class="face top">1</div>
+        <div class="face bottom">1</div>
+        </div>
+        <input type="button"  name="one" value="1" OnClick="calc.input.value += '1'"></div>
+
+      <div class="btn">
+      <span></span><span></span><span></span><span></span>     
+      <div class="wrapper">
+      <div class="face front">2</div>
+      <div class="face back">2</div>
+      <div class="face left">2</div>
+      <div class="face right">2</div>
+      <div class="face top">2</div>
+      <div class="face bottom">2</div>
+      </div>
+      <input type="button"  name="two" value="2" OnClick="calc.input.value += '2'"></div>
+
+      <div class="btn">
+        <span></span><span></span><span></span><span></span>     
+        <div class="wrapper">
+        <div class="face front">3</div>
+        <div class="face back">3</div>
+        <div class="face left">3</div>
+        <div class="face right">3</div>
+        <div class="face top">3</div>
+        <div class="face bottom">3</div>
+        </div>
+        <input type="button"  name="three" value="3" OnClick="calc.input.value += '3'"></div>
+
+       <div class="btn">
+      <span></span><span></span><span></span><span></span>     
+      <div class="wrapper">
+      <div class="face front">+</div>
+      <div class="face back">+</div>
+      <div class="face left">+</div>
+      <div class="face right">+</div>
+      <div class="face top">+</div>
+      <div class="face bottom">+</div>
+      </div>
+      <input type="button"  name="add" value="+" OnClick="calc.input.value += '+'"></div>
+      </div>
+
+      <div class="numbers">
+        <div class="btn"><span></span><span></span><span></span><span></span>  
+              <div class="wrapper">
+          <div class="face front">4</div>
+          <div class="face back">4</div>
+          <div class="face left">4</div>
+          <div class="face right">4</div>
+          <div class="face top">4</div>
+          <div class="face bottom">4</div>
+          </div>
+          <input type="button"  name="four" value="4" OnClick="calc.input.value += '4'"></div>
+
+        <div class="btn">
+        <span></span><span></span><span></span><span></span>     
+        <div class="wrapper">
+        <div class="face front">5</div>
+        <div class="face back">5</div>
+        <div class="face left">5</div>
+        <div class="face right">5</div>
+        <div class="face top">5</div>
+        <div class="face bottom">5</div>
+        </div>
+        <input type="button"  name="five" value="5" OnClick="calc.input.value += '5'"></div>
+
+        <div class="btn">
+          <span></span><span></span><span></span><span></span>     
+          <div class="wrapper">
+          <div class="face front">6</div>
+          <div class="face back">6</div>
+          <div class="face left">6</div>
+          <div class="face right">6</div>
+          <div class="face top">6</div>
+          <div class="face bottom">6</div>
+          </div>
+          <input type="button"  name="three" value="6" OnClick="calc.input.value += '6'"></div>
+
+        <div class="btn">
+        <span></span><span></span><span></span><span></span>     
+        <div class="wrapper">
+        <div class="face front">-</div>
+        <div class="face back">-</div>
+        <div class="face left">-</div>
+        <div class="face right">-</div>
+        <div class="face top">-</div>
+        <div class="face bottom">-</div>
+        </div>
+        <input type="button"  name="sub" value="-" OnClick="calc.input.value += '-'"></div>
+        </div>
+
+<div class="numbers">
+      <div class="btn"><span></span><span></span><span></span><span></span>  
+        <div class="wrapper">
+        <div class="face front">7</div>
+        <div class="face back">7</div>
+        <div class="face left">7</div>
+        <div class="face right">7</div>
+        <div class="face top">7</div>
+        <div class="face bottom">7</div>
+        </div>
+        <input type="button"  name="seven" value="7" OnClick="calc.input.value += '7'"></div>
+
+      <div class="btn">
+      <span></span><span></span><span></span><span></span>     
+      <div class="wrapper">
+      <div class="face front">8</div>
+      <div class="face back">8</div>
+      <div class="face left">8</div>
+      <div class="face right">8</div>
+      <div class="face top">8</div>
+      <div class="face bottom">8</div>
+      </div>
+      <input type="button"  name="eight" value="8" OnClick="calc.input.value += '8'"></div>
+
+      <div class="btn">
+        <span></span><span></span><span></span><span></span>     
+        <div class="wrapper">
+        <div class="face front">9</div>
+        <div class="face back">9</div>
+        <div class="face left">9</div>
+        <div class="face right">9</div>
+        <div class="face top">9</div>
+        <div class="face bottom">9</div>
+        </div>
+        <input type="button"  name="nine" value="9" OnClick="calc.input.value += '9'"></div>
+
+       <div class="btn">
+      <span></span><span></span><span></span><span></span>     
+      <div class="wrapper">
+      <div class="face front">*</div>
+      <div class="face back">*</div>
+      <div class="face left">*</div>
+      <div class="face right">*</div>
+      <div class="face top">*</div>
+      <div class="face bottom">*</div>
+      </div>
+      <input type="button"  name="mult" value="*" OnClick="calc.input.value += '*'"></div>
+      </div>
+
+      <div class="numbers">
+      <div class="btn"><span></span><span></span><span></span><span></span>
+        <div class="wrapper">
+        <div class="face front">С</div>
+        <div class="face back">С</div>
+        <div class="face left">С</div>
+        <div class="face right">С</div>
+        <div class="face top">С</div>
+        <div class="face bottom">С</div>
+        </div><input type="button"  name="clear" value="C" OnClick="calc.input.value = ''"></div>
+
+      <div class="btn"><span></span><span></span><span></span><span></span> 
+      <div class="wrapper">
+      <div class="face front">0</div>
+      <div class="face back">0</div>
+      <div class="face left">0</div>
+      <div class="face right">0</div>
+      <div class="face top">0</div>
+      <div class="face bottom">0</div>
+      </div><input type="button"  name="zero" value="0" OnClick="calc.input.value += '0'"></div>
+
+      <div class="btn"><span></span><span></span><span></span><span></span>            <div class="wrapper">
+      <div class="face front">=</div>
+      <div class="face back">=</div>
+      <div class="face left">=</div>
+      <div class="face right">=</div>
+      <div class="face top">=</div>
+      <div class="face bottom">=</div>
+      </div><input type="button"  name="doit" value="=" OnClick="calc.input.value = eval(calc.input.value)"></div>
+      
+      <div class="btn"><span></span><span></span><span></span><span></span>            <div class="wrapper">
+        <div class="face front">/</div>
+        <div class="face back">/</div>
+        <div class="face left">/</div>
+        <div class="face right">/</div>
+        <div class="face top">/</div>
+        <div class="face bottom">/</div>
+        </div><input type="button"  name="div"  value="/" OnClick="calc.input.value += '/'"></div>
+      </div>
+    </form>	
+    <div class="panel"><!--Панель выбора стилей-->
+      <button  class="panel-btn" onclick="btn1()">POP-IT</button>
+      <button  class="panel-btn" onclick="btn2()">SEA-WATER</button>
+      <button  class="panel-btn" onclick="btn3()">NEON</button>
+      <button  class="panel-btn" onclick="btn4()">FIRE</button>
+      <button  class="panel-btn" onclick="btn5()">SPACE</button>
+    </div>
+  </div>
+
+
+<!--js для переключения тем каждой кнопке-своя функция по замене стиля--> 
+ <script>     
+let link1 = document.querySelector('link');
+let link2 = document.querySelector('#myVideo');
+
+function btn1(){
+  link1.href ='styles/pop-it.css';
+  document.body.style.backgroundImage = 'url(media/pop-it.jpg)';
+}
+
+function btn2(){
+  document.body.style.backgroundImage = 'null';
+  link1.href ='styles/water-drop.css';
+  link2.src='media/sea.mp4';
+  
+}
+
+function btn3(){
+  link1.href ="styles/neon.css";
+  document.body.style.backgroundImage = 'url(media/neon.jpg)';
+}
+
+function btn4(){
+  link1.href ='styles/fire.css';
+  background = 'transparent';
+  link2.src="media/Fire Background.mp4";
+}
+
+function btn5(){
+  link1.href ='styles/space.css';
+  document.body.style.backgroundImage = 'url(media/space.jpg)';
+}
+ </script>
+
+       <!--Эффект движения для блоков-->
+<script type="text/javascript" src="script/vanilla-tilt.js"></script>
+
+
+<!--Настройки эффекта движения для блоков-->
+<script type="text/javascript" src="script/custom vanilla-tilt.js"></script>
+</body>
+</html>

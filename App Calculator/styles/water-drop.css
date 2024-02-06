@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body {
+	overflow: hidden;
+}
+.wrapper{
+	display: none;
+}
+
+span{
+	display:none;
+}
+
+#myVideo {
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.container{
+	position: absolute;
+	inset: 0px;	
+}
+
+.panel{
+	display: grid;
+	place-items: center;
+	position: absolute;
+	width: 30%;
+	height: 90vmin;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+}
+
+.panel button{ 
+	padding: auto 1vmax;
+	width:100%;
+	height: 100%;
+	font-size: 8vmin;
+	font-weight: 900;
+	color:white;
+	border: 1px solid white;
+	background: rgba(255, 255, 255, 0.1);
+	background-size: cover;
+}
+
+.panel button:nth-child(1n):hover{ 
+	background-image: url(../media/pop-it.jpg);
+	background-size: cover;
+}
+
+.panel button:nth-child(2n):hover{ 
+	background-image: url(../media/sea-poster.jpg);
+}
+
+.panel button:nth-child(3n):hover{ 
+	background: #03e9f4;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+				border: none;	
+				text-shadow: 0 0 5px white,
+				0 0 25px white,
+				0 0 50px white,
+				0 0 200px white;
+}
+
+.panel button:nth-child(4n):hover{ 
+	background-image: url(../media/fire-poster.jpg);
+}
+
+.panel button:nth-child(5n):hover{ 
+	background-image: url(../media/space.jpg);
+}
+
+.calculator {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				position: relative;
+				width: 55vmin;
+				height: 70vmin;
+				background: transparent;
+				border-radius: 15px;
+				box-shadow: 10px 10px 10px  rgba(0,0,0,0.3),
+	            -10px -10px 10px  rgba(255,255,255,0.3);
+				backdrop-filter: blur(10px);
+				margin: 12vmin;
+}
+
+input {
+	display: block;
+	font-size: 8vmin;
+	color: #fff;
+    width: 9vmin;
+	font-weight: 900;
+	text-align: center;
+	text-shadow: 3px 3px 9px rgba(0,0,0,0.8);
+	background: transparent;
+    border: none;
+	z-index: 20;
+}
+
+ .value {
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+    height: 10vmin;
+	font-size: 5vmin;
+	font-weight: 900;
+	background: transparent;
+	margin: 3vmin 5vmin;
+	box-shadow:
+	inset 10px 10px 10px  rgba(0,0,0,0.3),
+	inset -10px -10px 10px  rgba(255,255,255,0.3);
+	color:white;
+}
+
+ .input{
+	display: block;
+	font-size: 8vmin;
+    width: 9vmin;
+	font-weight: 900;
+	text-align: center;
+	background: transparent;
+    border: none;
+	z-index: 20;
+}
+
+.numbers {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 20%;
+	background: transparent;
+}
+
+.btn {
+    display: grid;
+	place-items: center;
+	position: relative;
+	background: transparent;
+	background-image:
+		radial-gradient(8% 8% at 22% 28%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 23% 27%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 24% 26%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 25% 25%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 26% 24%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 27% 23%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 28% 22%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%);
+	box-shadow:
+        inset 10px 10px 10px  rgba(0,0,0,0.2),
+        inset -5px -5px 10px  rgba(255,255,255,0.2),
+              10px 10px 10px  rgba(0,0,0,0.2);
+	border-radius: 50%;
+	cursor: pointer;
+	width: 25%;
+	height: 100%;
+	z-index: 15;
+}
+
+@keyframes shake {
+    0% {transform: translate(3px, 3px)}
+    20% {transform: translate(-6px, 0px)}
+    40% {transform: translate(3px, -3px)}
+    60% {transform: translate(-6px, 3px)}
+    80% {transform: translate(-3px, -3px)}
+    100% {transform: translate(3px, -4px)}
+}
+
+.btn:active {
+	animation: 1s shake ease-out infinite;
+}
+
+@media  (max-width:479px) and (orientation: portrait){
+	.panel{
+		display: flex;
+		position: absolute;
+		top: 0px;
+		right: 2vmin;
+		left: 2vmin;
+		background: transparent;
+		width: 90vmin;
+		height: 20vmin;
+	}
+	
+	.panel button{ 
+		font-size: 3vmin;
+		font-weight: 900;
+		color:white;
+		border: 1px solid white;
+		background: rgba(255, 255, 255, 0.1);
+		background-size: cover;
+
+	
+	}
+	.panel button:nth-child(1n){ 
+		background-image: url(../media/pop-it.jpg);
+		background-size: cover;
+	}
+	
+	.panel button:nth-child(2n){ 
+		background-image: url(../media/sea-poster.jpg);
+	}
+	
+	.panel button:nth-child(3n){ 
+		background: #03e9f4;
+		box-shadow: 0 0 5px #03e9f4,
+					0 0 25px #03e9f4,
+					0 0 50px #03e9f4,
+					0 0 200px #03e9f4;
+					border: none;	
+	}
+	
+	.panel button:nth-child(4n){ 
+		background-image: url(../media/fire-poster.jpg);
+	}
+	
+	.panel button:nth-child(5n){ 
+		background-image: url(../media/space.jpg);
+	}
+	
+	.calculator {
+		position: absolute;
+		top: 30vmin;
+		width: 55vmin;
+		height: 70vmin;
+		margin:  20vh auto;
+}
+.container{
+display: grid;
+place-items: center;
+}
+}

@@ -1,0 +1,315 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+backdrop-filter: blur(2px);
+background-image: url("../media/neon.jpg");
+background-size: cover;
+background-attachment: fixed;
+}
+
+
+.wrapper{
+	display: none;
+}
+
+#myVideo {
+display:none;
+}
+
+
+.container{
+	position: absolute;
+	inset: 0px;
+}
+
+.panel{
+	display: grid;
+	place-items: center;
+	position: absolute;
+	width: 30%;
+	height: 90vmin;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+}
+
+.panel button{ 
+	padding: auto 1vmax;
+	width:100%;
+	height: 100%;
+	font-size: 8vmin;
+	font-weight: 900;
+	color:white;
+	border: 1px solid white;
+    background: rgba(255, 255, 255, 0.1);
+	background-size: cover;
+}
+
+.panel button:nth-child(1n):hover{ 
+	background-image: url(../media/pop-it.jpg);
+	background-size: cover;
+}
+
+.panel button:nth-child(2n):hover{ 
+	background-image: url(../media/sea-poster.jpg);
+}
+
+.panel button:nth-child(3n):hover{ 
+	background: #03e9f4;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+				border: none;	
+}
+
+.panel button:nth-child(4n):hover{ 
+	background-image: url(../media/fire-poster.jpg);
+}
+
+.panel button:nth-child(5n):hover{ 
+	background-image: url(../media/space.jpg);
+}
+
+
+.calculator {
+	display: flex;
+	flex-direction: column;
+    flex-wrap: wrap;
+	position: relative;
+	width: 55vmin;
+	height: 70vmin;
+	border-radius: 15px;
+	box-shadow: 10px 10px 10px  rgba(0,0,0,0.3),
+	            -10px -10px 10px  rgba(255,255,255,0.3);
+	margin: 12vmin;
+}
+
+  .value {
+	width: 100%;
+	text-align: center;
+	padding: 2px;
+	margin: 3vmin 5vmin;
+	background: rgba(0, 0, 0, 0.5);
+	color: #a0bbf7;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+    height: 10vmin;
+	font-size: 5vmin;
+	font-weight: 900;
+}
+
+ .calculator [type="button"] {
+	width: 12vmin;
+	height: 12vmin;
+color: white;
+font-weight: 700;
+cursor: pointer;
+font-size: 10vmin;
+border:none;
+transition: 0.5s;
+background: transparent;
+}
+
+ .calculator [type="button"]:active {
+color: black;
+}
+
+/*панель с цифрами*/
+.numbers {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 20%;
+	background: transparent;
+}
+
+/*бегунок вокруг кнопки*/
+.btn {
+transition: 0.5s;
+overflow: hidden;
+display: grid;
+place-items: center;
+position: relative;
+background: transparent;
+cursor: pointer;
+width: 25%;
+height: 100%;
+z-index: 15;
+}
+
+.btn:hover {
+	background: #03e9f4;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+	}
+
+	/*стилистика и анимация бегунка*/
+.btn:nth-child(5) {
+filter: hue-rotate(110deg);
+}
+.btn:nth-child(9) {
+filter: hue-rotate(110deg);
+}
+.btn:nth-child(13) {
+filter: hue-rotate(110deg);
+}
+.btn:nth-child(17) {
+filter: hue-rotate(110deg);
+}	
+
+.btn span {
+position: absolute;
+display: block;
+}
+
+.btn span:nth-child(1) {
+top: 0;
+left: -100%;
+width: 100%;
+height: 3px;
+background: linear-gradient(90deg,transparent,#03e9f4);
+animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+0%
+{
+	left: -100%;
+}
+50%,100%
+{
+	left: 100%;
+}	
+}
+
+
+.btn span:nth-child(2) {
+top: -100%;
+right: 0;
+width: 3px;
+height: 100%;
+background: linear-gradient(180deg,transparent,#03e9f4);
+animation: animate2 1s linear infinite;
+animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+0%
+{
+	top: -100%;
+}
+50%,100%
+{
+	top: 100%;
+}	
+}
+
+.btn span:nth-child(3) {
+right: -100%;
+bottom: 0;
+height: 3px;
+width: 100%;
+background: linear-gradient(270deg,transparent,#03e9f4);
+animation: animate3 1s linear infinite;
+animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+0%
+{
+	right: -100%;
+}
+50%,100%
+{
+	right: 100%;
+}	
+}
+
+.btn span:nth-child(4) {
+bottom: -100%;
+left: 0;
+width: 3px;
+height: 100%;
+background: linear-gradient(360deg,transparent,#03e9f4);
+animation: animate4 1s linear infinite; animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+0%
+{
+	bottom: -100%;
+}
+50%,100%
+{
+	bottom: 100%;
+}	
+}
+
+@media  (max-width:479px) and (orientation: portrait){
+	.panel{
+		display: flex;
+		position: absolute;
+		top: 0px;
+		right: 2vmin;
+		left: 2vmin;
+		background: transparent;
+		width: 90vmin;
+		height: 20vmin;
+	}
+	
+	.panel button{ 
+		font-size: 3vmin;
+		font-weight: 900;
+		color:white;
+		border: 1px solid white;
+		background: rgba(255, 255, 255, 0.1);
+		background-size: cover;
+
+	
+	}
+	.panel button:nth-child(1n){ 
+		background-image: url(../media/pop-it.jpg);
+		background-size: cover;
+	}
+	
+	.panel button:nth-child(2n){ 
+		background-image: url(../media/sea-poster.jpg);
+	}
+	
+	.panel button:nth-child(3n){ 
+		background: #03e9f4;
+		box-shadow: 0 0 5px #03e9f4,
+					0 0 25px #03e9f4,
+					0 0 50px #03e9f4,
+					0 0 200px #03e9f4;
+					border: none;	
+	}
+	
+	.panel button:nth-child(4n){ 
+		background-image: url(../media/fire-poster.jpg);
+	}
+	
+	.panel button:nth-child(5n){ 
+		background-image: url(../media/space.jpg);
+	}
+	
+	.calculator {
+		position: absolute;
+		top: 30vmin;
+		width: 55vmin;
+		height: 70vmin;
+		margin:  20vh auto;
+}
+.container{
+display: grid;
+place-items: center;
+}
+}
